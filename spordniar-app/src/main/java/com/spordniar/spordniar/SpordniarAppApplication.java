@@ -1,0 +1,13 @@
+package com.spordniar.spordniar;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpordniarAppApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpordniarAppApplication.class, args);
+	}
+
+}
