@@ -19,6 +19,8 @@
 		<protoc.version>3.11.0</protoc.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<protostuff.version>1.0.10</protostuff.version>
+        <objenesis.version>2.4</objenesis.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -63,6 +65,22 @@
 			<groupId>org.springframework.boot</groupId>
         	<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		 <!-- Protostuff -->
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
+            <version>${protostuff.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
+            <version>${protostuff.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.objenesis</groupId>
+            <artifactId>objenesis</artifactId>
+            <version>${objenesis.version}</version>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
