@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "com.spordniar.proto";
+package spordniar;
+
+service SpordniarRpcs{
+	rpc sayHello (SayHelloRequest) returns (SayHelloReply) {
+		
+	}
+}
+message SayHelloRequest{
+	string name = 1;
+}
+message SayHelloReply {
+	string msg = 1;
+}
