@@ -3,3 +3,5 @@ server:
 netty:
  host: 127.0.0.1
  port: 8888
+spring.mvc.static-path-pattern: /**
+spring.resources.static-locations: classpath:/static/

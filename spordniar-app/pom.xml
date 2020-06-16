@@ -12,6 +12,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<properties>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<grpc.version>1.26.0</grpc.version><!-- CURRENT_GRPC_VERSION -->
@@ -39,6 +40,11 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
+		<dependency>
+		    <groupId>org.openjdk.jol</groupId>
+		    <artifactId>jol-core</artifactId>
+		    <version>0.10</version>
+		</dependency>
 		<dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
@@ -91,6 +97,11 @@
             <groupId>org.objenesis</groupId>
             <artifactId>objenesis</artifactId>
         </dependency>
+        <dependency>
+		  <groupId>javax.mail</groupId>
+		  <artifactId>mail</artifactId>
+		  <version>1.4.7</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -125,14 +136,14 @@
 					<pluginId>grpc-java</pluginId>
 					<pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
 				</configuration>
-				<executions>
+				<!-- <executions>
 					<execution>
 						<goals>
 							<goal>compile</goal>
 							<goal>compile-custom</goal>
 						</goals>
 					</execution>
-				</executions>
+				</executions> -->
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
